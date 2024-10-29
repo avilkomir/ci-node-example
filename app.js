@@ -6,6 +6,4 @@ app.get('/', (req, res) => {
     res.send('Hello, CI/CD World!');
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+module.exports = app;
