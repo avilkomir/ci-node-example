@@ -6,4 +6,9 @@ app.get('/', (req, res) => {
     res.send('Hello, CI/CD World!');
 });
 
+app.get('/health', (req, res) => {
+    res.send('I am healthy!');
+}
+);
+
 module.exports = app;

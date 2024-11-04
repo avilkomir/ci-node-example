@@ -9,3 +9,12 @@ describe('GET /', () => {
       .expect('Hello, CI/CD World!', done);
   });
 });
+
+describe('GET /health', () => {
+  it('responds with I am healthy!', (done) => {
+    request(app)
+      .get('/health')
+      .expect(200)
+      .expect('I am healthy!', done);
+  });
+});
