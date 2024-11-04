@@ -27,3 +27,15 @@ jobs:
 
     - name: Run tests # Step to run tests
       run: npm test # Run the npm test command
+    - name: Authenticate with GCP
+      env:
+        GCP_KEY: ${{ secrets.GCP_KEY }}
+        GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      run: |
+        echo $GCP_KEY | base64 --decode > "$HOME"/gcp-key.json
+        gcloud auth activate-service-account --key-file="$HOME"/gcp-key.json
+        gcloud config set project $GCP_PROJECT_ID
+
+    - name: Deploy to App Engine
+      run: |
+        gcloud app deploy --quiet
