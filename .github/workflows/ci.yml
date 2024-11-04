@@ -20,7 +20,7 @@ jobs:
     - name: Set up Node.js # Step to set up Node.js environment
       uses: actions/setup-node@v2 # Use the setup-node action from the GitHub Actions marketplace
       with:
-        node-version: '14' # Specify the Node.js version to use
+        node-version: '18' # Specify the Node.js version to use
 
     - name: Install dependencies # Step to install project dependencies
       run: npm install # Run the npm install command
