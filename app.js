@@ -11,4 +11,9 @@ app.get('/health', (req, res) => {
 }
 );
 
+app.get('/3030', (req, res) => {
+    res.send('Hello, CSCI 3030!');
+}   
+);
+
 module.exports = app;

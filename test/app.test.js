@@ -18,3 +18,13 @@ describe('GET /health', () => {
       .expect('I am healthy!', done);
   });
 });
+
+describe('GET /3030', () => {
+  it('responds with Hello, CSCI 3030!', (done) => {
+    request(app)
+      .get('/3030')
+      .expect(200)
+      .expect('Hello, CSCI 3030!', done);
+  }); 
+}
+);
