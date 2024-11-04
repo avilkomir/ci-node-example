@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/health', (req, res) => {
-    res.send('I am not healthy!');
+    res.send('I am healthy!');
 }
 );
 
