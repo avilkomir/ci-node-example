@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.send('Hello, CI/CD World from CSCI 3030!');
+    res.send('Hello, CI/CD World!');
 });
 
 app.get('/health', (req, res) => {
