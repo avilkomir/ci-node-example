@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../app');
 
 describe('GET /', () => {
-  it('responds with Hello, CI/CD World!', (done) => {
+  it('responds with Hello, CI/CD World from CSCI 3030!', (done) => {
     request(app)
       .get('/')
       .expect(200)
