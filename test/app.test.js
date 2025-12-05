@@ -11,11 +11,11 @@ describe('GET /', () => {
 });
 
 describe('GET /health', () => {
-  it('responds with I am healthy!', (done) => {
+  it('responds with I am nothealthy!', (done) => {
     request(app)
       .get('/health')
       .expect(200)
-      .expect('I am healthy!', done);
+      .expect('I am not healthy!', done);
   });
 });
 
