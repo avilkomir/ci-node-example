@@ -6,7 +6,7 @@ describe('GET /', () => {
     request(app)
       .get('/')
       .expect(200)
-      .expect('Hello, CI/CD World!', done);
+      .expect('Hello, CI/CD World from CSCI 3030!', done);
   });
 });
 
